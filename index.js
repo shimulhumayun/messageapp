@@ -19,7 +19,11 @@ app.post("/add",function(req,res){
   var name=req.body.username;
   //var obj ={};
   //obj[name]=req.body.usermessage;
-  contentsArray[name]=req.body.usermessage;;
+  contentsArray[name]=req.body.usermessage;
+  fs.writeFile('user.json', JSON.stringify(contentsArray), 'utf-8', function(err) {
+	if (err) throw err
+	  console.log(contentsArray);
+})
   res.redirect("/");
 
 })

@@ -1,3 +1,23 @@
-body{
-  background-color: green;
+body {
+    background-image: url('background.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+	float: left;
+    margin: 85px;
+}
+
+.messagePad {
+    float: right;
+    margin: 60px;
+    margin-bottom: 10px;
+    padding: 20px;
+    background-color: white;
+    height: 40%;
+    width: 40%;
+    font-weight: bold;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 25px;
 }

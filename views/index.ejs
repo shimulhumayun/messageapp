@@ -1,28 +1,36 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>Message Board</title>
     <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
+</head>
+
+<body>
     <div id="main">
-    <form id="form" action="/add" method="POST">
-      <h3>Username</h3>
-      <input type="text" name="username"><br>
-      <h3>Message</h3>
-      <textarea name="usermessage"rows="10" cols="50" placeholder="Please enter your message here!">
-    </textarea><br>
-        <button>Submit</button>
-</form>
-   <% if(contentsArray!=undefined){ %>
-    <% for (var m in contentsArray) { %>
-     <h2> Name: <%=m%></h2>
-     <h2> Message: <%=contentsArray[m]%></h2>
-     <hr>
+        <form id="form" action="/add" method="POST">
+            <div id="container">
+                <h3>Name</h3>
+                <input type="text" name="username">
+                <h3>Message</h3>
+                <textarea name="usermessage" rows="10" cols="50" placeholder="Please enter your message here!"></textarea>
+                <br>
+                <button>Submit</button>
+            </div>
+        </form>
+        <% if(contentsArray!=undefined){ %>
+            <% for (var m in contentsArray) { %>
+                <div class="messagePad"> Name:
+                    <%=m%>
+                        <br> Message:
+                        <%=contentsArray[m]%>
+                </div>
+    </div>
+    <hr>
     <% } %>
-    <% } %>
-  </div>
-    </form>
-  </body>
+        <% } %>
+            </div>
+</body>
+
 </html>
